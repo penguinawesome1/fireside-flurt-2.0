@@ -25,7 +25,7 @@ submitSignUp.addEventListener("click", function(event) {
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
@@ -39,7 +39,7 @@ googleLogin.addEventListener("click", function() {
         .then((result) => {
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const user = result.user;
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
